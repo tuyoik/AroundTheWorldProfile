@@ -12,21 +12,74 @@
         <nav>
             <img src="images/20240627_201820.webp" class="logo">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">Ummm... Welcome :)</a></li>
             </ul>
         </nav>
         <div class="header-text">
             <p>Comp Sci Student 😰😰</p>
-            <h1>Hi, I'm Andrew from Australia</h1>
+            <h1>Hi, I'm <span>Andrew</span> from Australia</h1>
 
         </div>
     </div>
 
 </div>
-    
+
+<!--About Section--> 
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/20240627_201820.webp">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi, I'm Andrew! Welcome to my website :3. <br> <br>I'm in my first year (and second term). I don't know very much about webdev but I tried my best 😅. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="experience">
+                    <ul>
+                        <li><span>Apple Foundation Program</span><br>IDK how I got in, but we made a very nonfunctional prototype app with Xcode that helped people make friends with an AI rat companion :3<br> It was suuuper cool.</li>
+                        <li><span>My COMP1511 Assignments</span><br> They passed all the test cases :D (except for a few pesky hidden testcases...)</li>
+                        Other than that, not really much, sorryyyy
+                    </ul>
+                </div>
+                <div class="tab-contents" id="hobbies">
+                    <ul>
+                        <li><span>Hiking</span><br>I really like hiking, I go </li>
+                        <li><span>Gym...?</span><br>I got my first gym membership like 2 weeks ago, so I guess its going to become my new hobby :D</li>
+                        <li><span>Doomscrolling</span><br>lets ignore this one...</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        Fun fact: I actually transferred from usyd :P. But UNSW is like better so of course, I had to come here.
+                        <li><span>Bachelor of Actuarial Studies / Computer Scienc (2024 - ?...)</span><br>It's going to be a wild ride...</li>
+                        <li><span>Bachelor of Engineering Honours / Commerce (2024 - Discontinued 😂)</span><br> Boring...</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");   
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");   
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
 </body>
 </html>
